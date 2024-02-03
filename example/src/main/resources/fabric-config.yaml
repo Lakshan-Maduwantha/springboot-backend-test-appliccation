@@ -1,0 +1,17 @@
+networks:
+  - name: mynetwork
+    channels:
+      - name: mychannel
+        peers:
+          - peer0.org1.example.com
+        orderers:
+          - orderer.example.com
+    users:
+      - name: user1
+        mspId: Org1MSP
+        roles:
+          - peer
+          - client
+          - admin
+        enrollId: user1
+        enrollSecret: pass
